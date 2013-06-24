@@ -1,11 +1,12 @@
 package groupwareAnwendung;
 
+import java.rmi.RemoteException;
 import java.util.HashMap;
 
 import rm.chat.user.Message;
 import rm.chat.user.UserAdministration;
 
-public class Listener {
+public class Listener implements ListenerStub {
 	
 	private UserAdministration userAdmin;
 	
@@ -68,6 +69,27 @@ public class Listener {
 	}
 	
 	public void serializeAdministration(Long lng){
+		
+	}
+
+
+	@Override
+	public ListenerStub connect() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public ListenerStub message(String text) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void disconnect() throws RemoteException {
+		// TODO Auto-generated method stub
 		
 	}
 }
